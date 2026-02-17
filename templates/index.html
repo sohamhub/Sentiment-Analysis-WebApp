@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+        <p class="accuracy">Model Accuracy: {{ accuracy }}</p>
+
+        <form action="/predict" method="post">
+            <textarea name="text" placeholder="Enter your tweet here..."></textarea>
+            <button type="submit">Analyze</button>
+        </form>
+
+        {% if prediction %}
+        {% set pred = prediction.lower().strip() %}
+        <div class="result 
+                {% if pred == 'positive' %}positive
+                {% elif pred == 'negative' %}negative
+                {% else %}neutral
+                {% endif %}">
+            Prediction: {{ prediction.upper() }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
