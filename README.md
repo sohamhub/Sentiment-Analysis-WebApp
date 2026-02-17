@@ -71,4 +71,17 @@ Built using:
 ---
 
 ## 🏗️ Project Structure
-
+Sentiment-Analysis-WebApp/
+│
+├── app.py
+├── model_train.py
+├── sentiment_model.pkl
+├── vectorizer.pkl
+│
+├── templates/
+│ └── index.html
+│
+├── static/
+│ └── style.css
+│
+└── README.md
