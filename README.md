@@ -50,6 +50,7 @@ Social media generates millions of user opinions daily. This project automates s
 
 ---
 
+
 ## 🌐 Web Application
 
 Built using:
